@@ -1,20 +1,15 @@
 function hasTargetSum(array, target) {
   let startIndex = 0;
-  let endIndex = array.length - 1;
-
-  /* for (let i = startIndex + 1; i <= endIndex; i++){
-    if(array[startIndex] + array[i] === target){
-      return true;
-    }
-  } startIndex++; */
 
   for(let counter = 0; counter < array.length - 1; counter++){
-    for (let i = startIndex + 1; i <= endIndex; i++){
+    for (let i = startIndex + 1; i <= array.length - 1; i++){
       if(array[startIndex] + array[i] === target){
         return true;
       }
-    } startIndex++;
-  } return false;
+    }
+    startIndex++;
+  }
+  return false;
 }
 
 // [a, b, c, d, e, f]           [a, b, c, d, e, f]          [a, b, c, d, e, f]
